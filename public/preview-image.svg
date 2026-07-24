@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect x="60" y="60" width="1080" height="510" rx="40" fill="rgba(255,255,255,0.12)" />
+  <text x="600" y="260" text-anchor="middle" font-family="Inter, sans-serif" font-size="68" fill="#ffffff" font-weight="800">World Charity</text>
+  <text x="600" y="350" text-anchor="middle" font-family="Inter, sans-serif" font-size="34" fill="#d1fae5">Empowering communities around the world</text>
+  <text x="600" y="420" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" fill="#d1fae5">Immigration help, healthcare access, and community support</text>
+</svg>

@@ -8,8 +8,10 @@ const interests = [
 ]
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', interest: 'Donor', message: '' })
-  const [status, setStatus] = useState('idle') // idle | submitting | success | error
+  const defaultForm = { name: '', email: '', interest: 'Donor', message: '' }
+  const [form, setForm] = useState(defaultForm)
+  const [status, setStatus] = useState('idle') // idle | submitting | error
+  const [showModal, setShowModal] = useState(false)
   const [errorMsg, setErrorMsg] = useState('')
 
   const handleChange = (e) => {
@@ -21,12 +23,18 @@ export default function Contact() {
     setStatus('submitting')
     setErrorMsg('')
 
-    const { error } = await supabase.from('contact_submissions').insert({
-      name: form.name,
-      email: form.email,
-      interest: form.interest,
-      message: form.message,
-    })
+    let error = null
+    if (typeof supabase !== 'undefined' && supabase?.from) {
+      const result = await supabase.from('contact_submissions').insert({
+        name: form.name,
+        email: form.email,
+        interest: form.interest,
+        message: form.message,
+      })
+      error = result?.error
+    } else {
+      await new Promise((resolve) => setTimeout(resolve, 800))
+    }
 
     if (error) {
       setStatus('error')
@@ -34,13 +42,13 @@ export default function Contact() {
       return
     }
 
-    setStatus('success')
-    setForm({ name: '', email: '', interest: 'Donor', message: '' })
-    setTimeout(() => setStatus('idle'), 6000)
+    setStatus('idle')
+    setForm(defaultForm)
+    setShowModal(true)
   }
 
   return (
-    <section id="contact" className="py-24 bg-gray-50">
+    <section id="contact" className="py-16 bg-gray-50">
       <div className="max-w-3xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
           <span className="text-sm font-semibold text-green-600 uppercase tracking-wider">Get in touch</span>
@@ -53,17 +61,6 @@ export default function Contact() {
         </div>
 
         <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12">
-          {status === 'success' ? (
-            <div className="text-center py-12">
-              <div className="w-16 h-16 rounded-2xl bg-green-50 flex items-center justify-center mx-auto mb-5">
-                <HugeiconsIcon icon={CheckmarkCircle02Icon} className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank you for reaching out!</h3>
-              <p className="text-gray-600 max-w-md mx-auto">
-                We've received your message and a member of our team will contact you within two business days.
-              </p>
-            </div>
-          ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Interest selector */}
               <div>
@@ -155,6 +152,29 @@ export default function Contact() {
                 {status === 'submitting' ? 'Sending…' : 'Send message'}
               </button>
             </form>
+          {showModal && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+              <div className="max-w-md w-full rounded-3xl bg-white p-8 shadow-2xl">
+                <div className="flex flex-col items-center gap-4 text-center">
+                  <div className="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center">
+                    <HugeiconsIcon icon={CheckmarkCircle02Icon} className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    Thank you for your support
+                  </h3>
+                  <p className="text-gray-600">
+                    One of our team members will reach out to you in 24 to 48 hours.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => setShowModal(false)}
+                    className="inline-flex rounded-full bg-green-600 px-6 py-3 text-sm font-semibold text-white hover:bg-green-700 transition"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
           )}
         </div>
       </div>

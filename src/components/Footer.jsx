@@ -1,50 +1,44 @@
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
-  Globe02Icon,
-  Share02Icon,
-  Message01Icon,
-  MailSend01Icon,
+  WhatsappIcon,
   ArrowUpRight01Icon,
 } from "@hugeicons/core-free-icons";
+import logo from "../assets/charity-logo.png";
 
 const cols = [
   {
     title: "Organization",
-    links: ["About us", "Our team", "Annual reports", "Careers", "Press kit"],
+    links: [
+      { label: "About us", href: "#about" },
+      { label: "Programs", href: "#programs" },
+      { label: "Our Impact", href: "#impact" },
+      { label: "Our Stories", href: "#stories" },
+      { label: "Events", href: "#events" },
+    ],
   },
   {
     title: "Programs",
     links: [
-      "Education",
-      "Clean water",
-      "Healthcare",
-      "Shelter & food",
-      "Emergency relief",
+      { label: "Immigration Assistance", href: "#programs" },
+      { label: "Healthcare Support", href: "#programs" },
+      { label: "Community & Social Service", href: "#programs" },
+      { label: "Case Support & Advocacy", href: "#programs" },
     ],
   },
   {
-    title: "Get involved",
+    title: "Contact",
     links: [
-      "Volunteer",
-      "Donate",
-      "Partner with us",
-      "Corporate giving",
-      "Fundraise",
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      "Blog",
-      "Impact data",
-      "Research papers",
-      "Media library",
-      "Contact",
+      { label: "+1 (972) 951 - 6310", href: "tel:+19729516310" },
+      { label: "info@worldcharity.in", href: "mailto:info@worldcharity.in" },
+      { label: "jaber@amadvocates.net", href: "mailto:jaber@amadvocates.net" },
+      { label: "Contact form", href: "#contact" },
     ],
   },
 ];
 
-const socials = [Share02Icon, Globe02Icon, Message01Icon, MailSend01Icon];
+const socials = [
+  { icon: WhatsappIcon, href: "https://wa.me/19729516310", label: "WhatsApp" },
+];
 
 const Footer = () => {
   return (
@@ -53,35 +47,33 @@ const Footer = () => {
         <div className="grid lg:grid-cols-12 gap-10 mb-12">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-2 mb-5">
-              <div className="w-10 h-10 rounded-xl bg-linear-to-br from-green-400 to-green-600 flex items-center justify-center shadow-lg">
-                <HugeiconsIcon
-                  icon={Globe02Icon}
-                  className="w-6 h-6 text-white"
-                />
+              <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center shadow-lg">
+                <img src={logo} alt="World Charity Logo" />
               </div>
               <span className="font-extrabold text-xl text-white">
-                WorldCharity
+                World Charity
               </span>
             </div>
-            <p className="text-green-100/70 leading-relaxed max-w-sm mb-6">
+            <p className="text-white leading-relaxed max-w-sm mb-6">
               A global, community-led movement bringing food, water, healthcare,
               and education to families in need — one life at a time.
             </p>
             <div className="flex gap-3">
-              {socials.map((icon, i) => (
+              {socials.map((social, i) => (
                 <a
                   key={i}
-                  href="#"
+                  target="_blank"
+                  href={social.href}  
                   className="w-10 h-10 rounded-full bg-white/5 hover:bg-green-600 flex items-center justify-center transition-all hover:scale-110"
-                  aria-label="social link"
+                  aria-label={social.label}
                 >
-                  <HugeiconsIcon icon={icon} className="w-5 h-5" />
+                  <HugeiconsIcon icon={social.icon} className="w-5 h-5" />
                 </a>
               ))}
             </div>
           </div>
 
-          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
             {cols.map((c) => (
               <div key={c.title}>
                 <h4 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">
@@ -89,12 +81,12 @@ const Footer = () => {
                 </h4>
                 <ul className="space-y-3">
                   {c.links.map((l) => (
-                    <li key={l}>
+                    <li key={l.label}>
                       <a
-                        href="#"
+                        href={l.href}
                         className="group inline-flex items-center gap-1 text-green-100/70 hover:text-white text-sm transition-colors"
                       >
-                        {l}
+                        {l.label}
                         <HugeiconsIcon
                           icon={ArrowUpRight01Icon}
                           className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
@@ -108,22 +100,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-green-100/60">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-center gap-4">
+          <p className="text-sm text-white">
             © 2026 WorldCharity Foundation. A registered non-profit. All
             donations are tax-deductible.
           </p>
-          <div className="flex gap-6 text-sm text-green-100/60">
-            <a href="#" className="hover:text-white transition-colors">
-              Privacy
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              Terms
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              Financials
-            </a>
-          </div>
         </div>
       </div>
     </footer>

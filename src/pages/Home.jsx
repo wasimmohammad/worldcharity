@@ -24,19 +24,19 @@ const values = [
   {
     icon: Target01Icon,
     title: "Our Mission",
-    text: "To relieve suffering and create lasting opportunity for vulnerable families worldwide, regardless of race, religion, or borders.",
+    text: "To provide accessible, affordable, and reliable support services to underserved communities, empowering individuals to overcome challenges and build a better future.",
     color: "bg-green-50 text-green-600",
   },
   {
     icon: HeartHandshakeIcon,
     title: "Our Values",
-    text: "Dignity, compassion, and accountability guide every program. We stand beside communities, not above them.",
+    text: "A future where every individual has equal access to essential services, regardless of financial status or background.",
     color: "bg-emerald-50 text-emerald-600",
   },
   {
     icon: Globe02Icon,
-    title: "Our Approach",
-    text: "We partner with local organizations on the ground, ensuring aid reaches those who need it most — efficiently and transparently.",
+    title: "Our Leadership",
+    text: "Dr. Majed Abdeljaber, President & CEO and Marry Williams, Legal Advocate",
     color: "bg-teal-50 text-teal-600",
   },
 ];
@@ -44,41 +44,41 @@ const values = [
 const programs = [
   {
     icon: GraduationCapIcon,
-    title: "Education",
-    desc: "Building schools, training teachers, and funding scholarships so every child can learn and dream.",
-    tag: "1,200 schools built",
+    title: "Immigration & Education Assistance",
+    desc: "Guidance and support with immigration processes, applications, and case navigation.",
+    tag: "1,200 students supported",
     image:
-      "https://images.pexels.com/photos/8364023/pexels-photo-8364023.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
-    icon: DropletsIcon,
-    title: "Clean Water",
-    desc: "Drilling wells and installing purification systems to bring safe drinking water to remote villages.",
-    tag: "8,400 wells drilled",
-    image:
-      "https://images.pexels.com/photos/2912348/pexels-photo-2912348.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.unsplash.com/photo-1520010017217-db8870fd542f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=compress&cs=tinysrgb&w=600",
   },
   {
     icon: StethoscopeIcon,
-    title: "Healthcare",
-    desc: "Running mobile clinics and vaccination campaigns to reach families with no access to care.",
-    tag: "3.1M patients treated",
+    title: "Healthcare Support & Access",
+    desc: "Assistance in connecting individuals with healthcare resources and providers.",
+    tag: "1500 patients treated",
     image:
-      "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.unsplash.com/photo-1624727828489-a1e03b79bba8?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=compress&cs=tinysrgb&w=600",
   },
   {
-    icon: Home01Icon,
-    title: "Shelter & Food",
-    desc: "Distributing emergency meals and rebuilding homes for families displaced by crisis or disaster.",
-    tag: "920K homes rebuilt",
+    icon: UserGroupIcon,
+    title: "Community & Social Services",
+    desc: "Support for individuals and families facing financial or social challenges through direct aid and community programs.",
+    tag: "1,400 families supported",
     image:
-      "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.unsplash.com/photo-1531844251246-9a1bfaae09fc?q=80&w=1816&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    icon: HandHeartIcon,
+    title: "Case Support & Advocacy Services",
+    desc: "Personalized assistance to help navigate complex situations, including legal guidance and advocacy.",
+    tag: "800 cases resolved",
+    image:
+      "https://images.unsplash.com/photo-1760892165556-a109903281c6?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=compress&cs=tinysrgb&w=600",
   },
 ];
 
 const stats = [
-  { value: "5.2M+", label: "Lives helped", icon: HeartHandshakeIcon },
-  { value: "220K", label: "Active volunteers", icon: UserGroupIcon },
+  { value: "2000+", label: "Lives helped", icon: HeartHandshakeIcon },
+  { value: "1000+", label: "Active volunteers", icon: UserGroupIcon },
   { value: "60", label: "Countries reached", icon: ChartUpIcon },
   { value: "92%", label: "Funds to programs", icon: Award01Icon },
 ];
@@ -88,15 +88,15 @@ const stories = [
     name: "Amara Ndlovu",
     role: "Mother and small-business owner, Zimbabwe",
     quote:
-      "When the drought came, I could not feed my children. WorldCharity brought food, then a micro-grant to restart my sewing shop. Today I employ three other women.",
+      "When the drought came, I could not feed my children. World Charity brought food, then a micro-grant to restart my sewing shop. Today I employ three other women.",
     image:
       "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
   {
-    name: "Rajesh Patel",
+    name: "Ravi Mathews",
     role: "Teacher at a community school, India",
     quote:
-      "Our village had no school. WorldCharity helped build one and trained me to teach. Now 120 children learn here every day, and three have gone to university.",
+      "Our village had no school. World Charity helped build one and trained me to teach. Now 120 children learn here every day, and three have gone to university.",
     image:
       "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
@@ -104,7 +104,7 @@ const stories = [
     name: "Maria Santos",
     role: "Clinic health worker, Philippines",
     quote:
-      "After the typhoon, our clinic was destroyed. Within a week, WorldCharity set up a mobile clinic and vaccinated every child in our barangay. They saved lives.",
+      "After the typhoon, our clinic was destroyed. Within a week, World Charity set up a mobile clinic and vaccinated every child in our barangay. They saved lives.",
     image:
       "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
@@ -139,54 +139,31 @@ const Home = () => {
     <main className="min-h-screen">
       <section
         id="home"
-        className="relative min-h-screen flex items-center overflow-hidden bg-linear-to-br from-green-800 via-green-700 to-green-900"
+        className="relative min-h-screen flex items-center overflow-hidden bg-[url('./assets/landing-image.webp')] bg-cover bg-center bg-no-repeat"
       >
-        {/* Decorative blobs */}
-        <div className="absolute top-20 -left-20 w-96 h-96 bg-green-500/30 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-125 h-125 bg-green-400/20 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-emerald-300/10 rounded-full blur-3xl" />
-
-        {/* Grid overlay */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 grid lg:grid-cols-2 gap-12 items-center w-full">
+        <div className="relative z-10 max-w-7xl mx-auto py-24 grid lg:grid-cols-2 gap-6 items-center w-full">
           {/* Left content */}
-          <div className="text-white">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-              <HugeiconsIcon
-                icon={HandHeartIcon}
-                className="w-4 h-4 text-green-200"
-              />
-              <span className="text-sm font-medium text-green-50">
-                Compassion in action
+          <div className="text-white border border-white/20 rounded-3xl py-4 pl-6 backdrop-blur shadow-xl mx-5 md:mx-0">
+            <h1 className="text-3xl lg:text-5xl font-extrabold leading-[1.3] tracking-tight mb-6">
+              Empowering Communities
+              <span className="block bg-linear-to-r from-green-300 via-emerald-400 to-green-500 bg-clip-text text-transparent">
+                Changing Lives Together.
               </span>
-            </div>
-
-            <h1 className="text-5xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6">
-              Changing lives
-              <span className="block bg-linear-to-r from-green-200 via-emerald-200 to-green-300 bg-clip-text text-transparent">
-                around the world
-              </span>
-              together.
             </h1>
 
-            <p className="text-lg lg:text-xl text-green-50/90 max-w-xl mb-10 leading-relaxed">
-              WorldCharity brings food, clean water, healthcare, and education
-              to communities in need — one family, one village, one future at a
-              time.
+            <p className="text-lg lg:text-xl text-green-50/90 max-w-xl mb-6 leading-relaxed">
+              World Charity USA Org is an independent nonprofit organization
+              dedicated to supporting underserved communities through
+              immigration assistance, healthcare access, and essential social
+              services. Our work is driven by a commitment to integrity,
+              compassion, and direct community impact, without reliance on
+              government or private funding.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
               <a
                 href="#programs"
-                className="group inline-flex items-center gap-2 bg-white text-green-800 font-semibold px-7 py-4 rounded-full hover:bg-green-50 transition-all shadow-xl shadow-green-900/30 hover:scale-105"
+                className="group inline-flex items-center gap-2 bg-white text-green-800 font-semibold px-7 py-4 rounded-full hover:bg-green-50 transition-all hover:scale-105"
               >
                 Join the mission
                 <HugeiconsIcon
@@ -194,98 +171,34 @@ const Home = () => {
                   className="w-5 h-5 group-hover:translate-x-1 transition-transform"
                 />
               </a>
-              <a
-                href="#impact"
-                className="group inline-flex items-center gap-2 text-white font-semibold px-7 py-4 rounded-full border border-white/30 hover:bg-white/10 transition-all"
-              >
-                <HugeiconsIcon
-                  icon={PlayCircleIcon}
-                  className="w-5 h-5 fill-white"
-                />
-                Watch our story
-              </a>
             </div>
 
-            <div className="flex flex-wrap gap-8 mt-12 pt-8 border-t border-white/20">
+            <div className="flex flex-wrap gap-8 mt-6 pt-8 border-t border-white/20">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
-                  <HugeiconsIcon
-                    icon={HandHeartIcon}
-                    className="w-5 h-5 text-green-200"
-                  />
+                  <HugeiconsIcon icon={HandHeartIcon} className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold">5.2M+</div>
-                  <div className="text-sm text-green-100/80">Lives helped</div>
+                  <div className="text-2xl font-bold">1000+</div>
+                  <div className="text-sm">Lives helped</div>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
-                  <HugeiconsIcon
-                    icon={UserGroupIcon}
-                    className="w-5 h-5 text-green-200"
-                  />
+                  <HugeiconsIcon icon={UserGroupIcon} className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold">220K</div>
-                  <div className="text-sm text-green-100/80">Volunteers</div>
+                  <div className="text-2xl font-bold">100+</div>
+                  <div className="text-sm">Volunteers</div>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
-                  <HugeiconsIcon
-                    icon={Globe02Icon}
-                    className="w-5 h-5 text-green-200"
-                  />
+                  <HugeiconsIcon icon={Globe02Icon} className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold">60</div>
-                  <div className="text-sm text-green-100/80">Countries</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right visual */}
-          <div className="relative hidden lg:block">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-linear-to-tr from-green-400/30 to-emerald-300/20 rounded-[2.5rem] blur-2xl" />
-              <img
-                src="https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=900"
-                alt="Volunteers helping community"
-                className="relative rounded-4xl shadow-2xl object-cover w-full h-140"
-              />
-              {/* Floating card */}
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-2xl p-5 w-64">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
-                    <HugeiconsIcon
-                      icon={HandHeartIcon}
-                      className="w-6 h-6 text-green-600"
-                    />
-                  </div>
-                  <div>
-                    <div className="text-xs text-gray-500 font-medium">
-                      This month
-                    </div>
-                    <div className="text-lg font-bold text-gray-900">
-                      +42,800 meals
-                    </div>
-                  </div>
-                </div>
-                <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                  <div className="h-full w-3/4 bg-linear-to-r from-green-500 to-green-600 rounded-full" />
-                </div>
-                <div className="text-xs text-gray-500 mt-2">
-                  75% of monthly goal
-                </div>
-              </div>
-              <div className="absolute -top-6 -right-6 bg-white rounded-2xl shadow-2xl p-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-sm font-semibold text-gray-700">
-                    Live aid delivery
-                  </span>
+                  <div className="text-2xl font-bold">10+</div>
+                  <div className="text-sm">Countries</div>
                 </div>
               </div>
             </div>
@@ -306,7 +219,7 @@ const Home = () => {
           </svg>
         </div>
       </section>
-      <section id="about" className="py-24 bg-white">
+      <section id="about" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div className="relative">
@@ -316,7 +229,7 @@ const Home = () => {
                 className="rounded-3xl shadow-xl object-cover w-full h-120"
               />
               <div className="absolute -bottom-8 -right-8 bg-green-600 text-white rounded-2xl p-6 shadow-2xl hidden sm:block">
-                <div className="text-4xl font-extrabold">25+</div>
+                <div className="text-4xl font-extrabold">5+</div>
                 <div className="text-sm text-green-50">Years of service</div>
               </div>
             </div>
@@ -325,20 +238,24 @@ const Home = () => {
                 Who we are
               </span>
               <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mt-3 mb-6 leading-tight">
-                A global movement for{" "}
+                A global movement for {" "}
                 <span className="text-green-600">human dignity</span>
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Founded in 2001, WorldCharity began as a small group of
-                volunteers delivering food and medical supplies to a single
-                crisis region. Today we are a global network of aid workers,
-                donors, and local partners operating across 60 countries.
+                Founded in 2021, World Charity USA Org is an independent
+                nonprofit organization committed to serving underserved and
+                vulnerable communities through comprehensive support services.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                We believe the best way to fight poverty and suffering is to
-                empower the people closest to it. Our programs are built with
-                local communities, led by their needs, and measured by the lives
-                changed.
+                Operating independently without reliance on government funding
+                or private grants allows us to remain focused entirely on
+                community needs. This independence ensures flexibility,
+                responsiveness, and a direct connection to the individuals and
+                families we serve. Our work is centered on bridging gaps in
+                access to legal guidance, healthcare resources, and community
+                support. Through direct engagement and practical solutions, we
+                assist individuals in navigating complex systems and making
+                informed decisions.
               </p>
               <div className="flex flex-wrap gap-3">
                 {[
@@ -378,7 +295,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="programs" className="py-24 bg-gray-50">
+      <section id="programs" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-sm font-semibold text-green-600 uppercase tracking-wider">
@@ -437,7 +354,7 @@ const Home = () => {
       </section>
       <section
         id="impact"
-        className="py-24 bg-linear-to-br from-green-800 to-green-950 relative overflow-hidden"
+        className="py-16 bg-linear-to-br from-green-800 to-green-950 relative overflow-hidden"
       >
         <div className="absolute top-0 right-0 w-96 h-96 bg-green-500/20 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-emerald-400/10 rounded-full blur-3xl" />
@@ -460,18 +377,15 @@ const Home = () => {
             {stats.map((s) => (
               <div
                 key={s.label}
-                className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all"
+                className="group bg-white backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center transition-all"
               >
                 <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform">
-                  <HugeiconsIcon
-                    icon={s.icon}
-                    className="w-7 h-7 text-green-200"
-                  />
+                  <HugeiconsIcon icon={s.icon} className="w-10 h-10" />
                 </div>
-                <div className="text-4xl lg:text-5xl font-extrabold text-white mb-2">
+                <div className="text-4xl lg:text-5xl font-extrabold mb-2">
                   {s.value}
                 </div>
-                <div className="text-sm text-green-100/70">{s.label}</div>
+                <div className="text-sm">{s.label}</div>
               </div>
             ))}
           </div>
@@ -480,17 +394,17 @@ const Home = () => {
             {[
               {
                 title: "Meals served",
-                value: "38M meals",
+                value: "5000 meals",
                 sub: "Hot meals and food parcels distributed",
               },
               {
                 title: "People with clean water",
-                value: "4.6M people",
+                value: "1000 people",
                 sub: "Safe drinking water access established",
               },
               {
                 title: "Children educated",
-                value: "780,000+",
+                value: "2000+",
                 sub: "Kids enrolled in schools we support",
               },
             ].map((m) => (
@@ -510,7 +424,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="stories" className="py-24 bg-white">
+      <section id="stories" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-sm font-semibold text-green-600 uppercase tracking-wider">
@@ -554,7 +468,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="events" className="py-24 bg-white">
+      <section id="events" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
             <div className="max-w-xl">

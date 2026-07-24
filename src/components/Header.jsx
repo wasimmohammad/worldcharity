@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { HugeiconsIcon } from '@hugeicons/react'
 import { Menu01Icon, Cancel01Icon, Globe02Icon } from '@hugeicons/core-free-icons'
+import logo from '../assets/charity-logo.png'
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -30,11 +31,11 @@ const Header = () => {
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
         <a href="#home" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-xl bg-linear-to-br from-green-500 to-green-700 flex items-center justify-center shadow-lg shadow-green-600/20 group-hover:scale-105 transition-transform">
-            <HugeiconsIcon icon={Globe02Icon} className="w-6 h-6 text-white" />
+          <div className="w-14 h-14 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <img src={logo} alt="World Charity Logo" className="w-14 h-14" />
           </div>
-          <span className={`font-extrabold text-xl tracking-tight ${scrolled ? 'text-green-800' : 'text-white'}`}>
-            WorldCharity
+          <span className={`font-extrabold text-2xl tracking-tight ${scrolled ? 'text-green-800' : 'text-green-800'}`}>
+            World Charity
           </span>
         </a>
 
@@ -43,8 +44,8 @@ const Header = () => {
             <li key={link.label}>
               <a
                 href={link.href}
-                className={`text-sm font-medium hover:text-green-500 transition-colors ${
-                  scrolled ? 'text-gray-700' : 'text-white/90'
+                className={`text-md font-medium hover:text-green-500 transition-colors ${
+                  scrolled ? 'text-gray-700' : 'text-white'
                 }`}
               >
                 {link.label}
