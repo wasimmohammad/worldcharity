@@ -61,6 +61,13 @@ export default function Contact() {
         </div>
 
         <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12">
+            <div className="mb-8 border-b border-green-100 pb-6">
+              <h3 className="text-sm font-semibold text-green-700 mb-2">Our address</h3>
+              <address className="not-italic text-gray-600 leading-relaxed">
+                5000 Quorum Drive, Suite 630,<br />
+                Dallas, Texas 75254
+              </address>
+            </div>
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Interest selector */}
               <div>

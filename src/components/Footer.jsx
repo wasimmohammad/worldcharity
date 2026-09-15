@@ -9,20 +9,21 @@ const cols = [
   {
     title: "Organization",
     links: [
-      { label: "About us", href: "#about" },
-      { label: "Programs", href: "#programs" },
-      { label: "Our Impact", href: "#impact" },
-      { label: "Our Stories", href: "#stories" },
-      { label: "Events", href: "#events" },
+      { label: "About us", href: "/#about" },
+      { label: "Our Services", href: "/services" },
+      { label: "Programs", href: "/#programs" },
+      { label: "Our Impact", href: "/#impact" },
+      { label: "Our Stories", href: "/#stories" },
+      { label: "Events", href: "/#events" },
     ],
   },
   {
     title: "Programs",
     links: [
-      { label: "Immigration Assistance", href: "#programs" },
-      { label: "Healthcare Support", href: "#programs" },
-      { label: "Community & Social Service", href: "#programs" },
-      { label: "Case Support & Advocacy", href: "#programs" },
+      { label: "Immigration Assistance", href: "/#programs" },
+      { label: "Healthcare Support", href: "/#programs" },
+      { label: "Community & Social Service", href: "/#programs" },
+      { label: "Case Support & Advocacy", href: "/#programs" },
     ],
   },
   {
@@ -31,7 +32,7 @@ const cols = [
       { label: "+1 (972) 951 - 6310", href: "tel:+19729516310" },
       { label: "info@worldcharity.in", href: "mailto:info@worldcharity.in" },
       { label: "jaber@amadvocates.net", href: "mailto:jaber@amadvocates.net" },
-      { label: "Contact form", href: "#contact" },
+      { label: "Contact form", href: "/#contact" },
     ],
   },
 ];
@@ -79,6 +80,12 @@ const Footer = () => {
                 <h4 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">
                   {c.title}
                 </h4>
+                {c.title === "Contact" && (
+                  <address className="mb-4 text-sm not-italic leading-relaxed text-green-100/70">
+                    5000 Quorum Drive, Suite 630,<br />
+                    Dallas, Texas 75254
+                  </address>
+                )}
                 <ul className="space-y-3">
                   {c.links.map((l) => (
                     <li key={l.label}>

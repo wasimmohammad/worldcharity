@@ -1,21 +1,26 @@
 import { useState, useEffect } from 'react'
 import { HugeiconsIcon } from '@hugeicons/react'
-import { Menu01Icon, Cancel01Icon, Globe02Icon } from '@hugeicons/core-free-icons'
+import { Menu01Icon, Cancel01Icon } from '@hugeicons/core-free-icons'
+import { useLocation } from 'react-router'
 import logo from '../assets/charity-logo.png'
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Programs', href: '#programs' },
-  { label: 'Impact', href: '#impact' },
-  { label: 'Stories', href: '#stories' },
-  { label: 'Events', href: '#events' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/#home' },
+  { label: 'About Us', href: '/#about' },
+  { label: 'Services', href: '/services' },
+  { label: 'Programs', href: '/#programs' },
+  { label: 'Impact', href: '/#impact' },
+  { label: 'Stories', href: '/#stories' },
+  { label: 'Events', href: '/#events' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 const Header = () => {
+  const { pathname } = useLocation()
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+
+  const solidHeader = scrolled || pathname !== '/'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -26,26 +31,27 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-transparent'
+        solidHeader ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-transparent'
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
-        <a href="#home" className="flex items-center gap-2 group">
+        <a href="/#home" className="flex items-center gap-2 group">
           <div className="w-14 h-14 flex items-center justify-center group-hover:scale-105 transition-transform">
             <img src={logo} alt="World Charity Logo" className="w-14 h-14" />
           </div>
-          <span className={`font-extrabold text-2xl tracking-tight ${scrolled ? 'text-green-800' : 'text-green-800'}`}>
+          <span className={`font-extrabold text-2xl tracking-tight ${solidHeader ? 'text-green-800' : 'text-green-800'}`}>
             World Charity
           </span>
         </a>
 
-        <ul className="hidden lg:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-5">
           {navLinks.map((link) => (
             <li key={link.label}>
               <a
                 href={link.href}
+                aria-current={link.href === pathname ? "page" : undefined}
                 className={`text-md font-medium hover:text-green-500 transition-colors ${
-                  scrolled ? 'text-gray-700' : 'text-white'
+                  solidHeader ? 'text-gray-700' : 'text-white'
                 }`}
               >
                 {link.label}
@@ -56,9 +62,9 @@ const Header = () => {
 
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href="#contact"
+            href="/#contact"
             className={`text-sm font-semibold px-5 py-2.5 rounded-full transition-all ${
-              scrolled
+              solidHeader
                 ? 'bg-green-600 text-white hover:bg-green-700 shadow-lg shadow-green-600/30'
                 : 'bg-white text-green-700 hover:bg-green-50'
             }`}
@@ -71,11 +77,12 @@ const Header = () => {
           className="lg:hidden p-2"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
+          aria-expanded={open}
         >
           {open ? (
-            <HugeiconsIcon icon={Cancel01Icon} className={`w-6 h-6 ${scrolled ? 'text-gray-800' : 'text-white'}`} />
+            <HugeiconsIcon icon={Cancel01Icon} className={`w-6 h-6 ${solidHeader ? 'text-gray-800' : 'text-white'}`} />
           ) : (
-            <HugeiconsIcon icon={Menu01Icon} className={`w-6 h-6 ${scrolled ? 'text-gray-800' : 'text-white'}`} />
+            <HugeiconsIcon icon={Menu01Icon} className={`w-6 h-6 ${solidHeader ? 'text-gray-800' : 'text-white'}`} />
           )}
         </button>
       </nav>
@@ -87,6 +94,7 @@ const Header = () => {
               <li key={link.label}>
                 <a
                   href={link.href}
+                aria-current={link.href === pathname ? "page" : undefined}
                   onClick={() => setOpen(false)}
                   className="block text-gray-700 font-medium hover:text-green-600 py-2"
                 >
@@ -96,7 +104,7 @@ const Header = () => {
             ))}
             <li>
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setOpen(false)}
                 className="block text-center bg-green-600 text-white font-semibold px-5 py-3 rounded-full mt-2"
               >
