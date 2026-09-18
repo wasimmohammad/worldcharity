@@ -130,18 +130,17 @@ const Home = () => {
         <main className="min-h-screen">
             <section
                 id="home"
-                className="relative min-h-screen flex items-center overflow-hidden bg-[url('./assets/landing-image.webp')] bg-cover bg-center bg-no-repeat"
+                className="relative min-h-screen flex items-center overflow-hidden bg-[url('./assets/landing-image.webp')] bg-cover bg-[position:75%_center] lg:bg-center bg-no-repeat"
             >
                 <div className="relative z-10 max-w-7xl mx-auto py-24 grid lg:grid-cols-2 gap-6 items-center w-full">
                     {/* Left content */}
                     <div className="text-white border border-white/20 rounded-3xl py-4 pl-6 backdrop-blur shadow-xl mx-5 md:mx-0">
                         <h1 className="text-3xl lg:text-5xl font-extrabold leading-[1.3] tracking-tight mb-6">
                             Empowering Communities
-                            <span className="block bg-linear-to-r from-green-300 via-emerald-400 to-green-500 bg-clip-text text-transparent">
+                            <span className="block text-green-800">
                                 Changing Lives Together.
                             </span>
                         </h1>
-
                         <p className="text-lg lg:text-xl max-w-xl mb-6 leading-relaxed">
                             World Charity USA Org is an independent nonprofit
                             organization dedicated to supporting underserved
